@@ -5,5 +5,7 @@ import com.wx.wlcx.po.CMMatcher;
 import java.util.List;
 
 public interface MatcherService {
-    public List<CMMatcher> getAll();
+    List<CMMatcher> getAll();
+
+    List<com.wx.wlcx.model.CMMatcher> findAll(int pageNum, int pageSize);
 }
