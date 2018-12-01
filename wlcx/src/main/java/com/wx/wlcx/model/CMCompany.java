@@ -1,6 +1,7 @@
 package com.wx.wlcx.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class CMCompany {
     private String coid;
@@ -66,6 +67,22 @@ public class CMCompany {
     private Integer coLatype;
 
     private Integer coStarts;
+
+    private String coPiclogo;
+
+    private String coIntroduction;
+
+    private String coSurvev;
+
+    private List<CMMatcher> cmMatchers;
+
+    public List<CMMatcher> getCmMatchers() {
+        return cmMatchers;
+    }
+
+    public void setCmMatchers(List<CMMatcher> cmMatchers) {
+        this.cmMatchers = cmMatchers;
+    }
 
     public String getCoid() {
         return coid;
@@ -321,5 +338,29 @@ public class CMCompany {
 
     public void setCoStarts(Integer coStarts) {
         this.coStarts = coStarts;
+    }
+
+    public String getCoPiclogo() {
+        return coPiclogo;
+    }
+
+    public void setCoPiclogo(String coPiclogo) {
+        this.coPiclogo = coPiclogo == null ? null : coPiclogo.trim();
+    }
+
+    public String getCoIntroduction() {
+        return coIntroduction;
+    }
+
+    public void setCoIntroduction(String coIntroduction) {
+        this.coIntroduction = coIntroduction == null ? null : coIntroduction.trim();
+    }
+
+    public String getCoSurvev() {
+        return coSurvev;
+    }
+
+    public void setCoSurvev(String coSurvev) {
+        this.coSurvev = coSurvev == null ? null : coSurvev.trim();
     }
 }

@@ -17,16 +17,11 @@
     <result column="CR_Style" property="crStyle" jdbcType="INTEGER" />
     <result column="CR_Grade" property="crGrade" jdbcType="INTEGER" />
   </resultMap>
-  <sql id="Base_Column_List" >
-    COID, CR_Idx, CR_Mode, CT_Mode, CR_Fate, RG_Code, RG_Name, AR_Code, AR_Name,
-    CM_Code, CM_Name, CR_Addr, CR_Style, CR_Grade
-  </sql>
-
   <insert id="insert" parameterType="com.wx.wlcx.model.CMMatcher" >
     insert into CM_Matcher (COID, CR_Idx, CR_Mode, 
       CT_Mode, CR_Fate, RG_Code, 
       RG_Name, AR_Code, AR_Name, 
-      CM_Code, CM_Name, CR_addr, 
+      CM_Code, CM_Name, CR_Addr, 
       CR_Style, CR_Grade)
     values (#{coid,jdbcType=NCHAR}, #{crIdx,jdbcType=INTEGER}, #{crMode,jdbcType=INTEGER}, 
       #{ctMode,jdbcType=INTEGER}, #{crFate,jdbcType=DOUBLE}, #{rgCode,jdbcType=NVARCHAR}, 
@@ -71,7 +66,7 @@
         CM_Name,
       </if>
       <if test="crAddr != null" >
-        CR_addr,
+        CR_Addr,
       </if>
       <if test="crStyle != null" >
         CR_Style,
@@ -125,12 +120,4 @@
       </if>
     </trim>
   </insert>
-
-  <select id="getAll" resultMap="BaseResultMap">
-    SELECT <include refid="Base_Column_List" /> FROM CM_Matcher ORDER BY COID
-  </select>
-
-  <!--<select id="getAll" resultMap="BaseResultMap">-->
-    <!--SELECT * FROM CM_Matcher-->
-  <!--</select>-->
 </mapper>

@@ -1,4 +1,18 @@
-# wxwl
-demo for 物流查询
-springboot 集成mybatis, logbak, pageHelper, Thymeleaf, druid数据源监控
-数据库：sqlserver2012 有sql文件在源代码中
+# wxwlcx
+demo for 微信公众号开发
+后台：
+
+springboot mybatis sqlserver2012 
+
+前端：
+angularJS
+
+DB:
+https://share.weiyun.com/5xdfGpZ
+
+
+启动及部署：
+
+
+
+note:

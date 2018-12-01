@@ -34,7 +34,7 @@ public class CMMatcher {
     }
 
     public void setCoid(String coid) {
-        this.coid = coid == null ? null : coid.trim();
+        this.coid = coid;
     }
 
     public Integer getCrIdx() {
