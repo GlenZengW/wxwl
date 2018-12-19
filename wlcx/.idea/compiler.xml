@@ -9,8 +9,5 @@
         <module name="wlcx" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="wlcx" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
